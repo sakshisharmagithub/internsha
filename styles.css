@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+  font-family: 'Poppins', Arial, sans-serif; /* Clean and modern font */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #7e6e74b9, #6c9bb9); /* Subtle gradient */
+  color: #333;
+}
+
+header {
+  background-color: #150125;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 2rem;
+}
+
+.search-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+#searchBox, #filterCategory, #searchButton {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+#searchBox:focus, #filterCategory:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Highlight effect */
+}
+
+#searchButton {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#searchButton:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.results-section {
+  margin: 2rem auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Modern card effect */
+  padding: 1.5rem;
+}
+
+.results-section h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007BFF;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+#resultsContainer div {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for each result */
+  transition: all 0.3s ease;
+}
+
+#resultsContainer div:hover {
+  transform: scale(1.02); /* Slight scale on hover */
+  background-color: #f0f8ff; /* Soft blue background on hover */
+}
+
+#resultsContainer h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+#resultsContainer p {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+  .search-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #searchBox, #filterCategory, #searchButton {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #searchButton {
+    margin-bottom: 0; /* Remove last gap */
+  }
+}
